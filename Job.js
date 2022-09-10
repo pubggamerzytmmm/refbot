@@ -6,7 +6,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const rateLimit = require('telegraf-ratelimit')
-var bot_token = '5206099855:AAH2dz5_SLtEwYoSsNkQFIGLEmofZiaAKcI'; //YOUR BOT TOKEN HERE
+var bot_token = '5525434218:AAGR6DiC6eAQJBv50MYurV4VDNPn3T1X3Ag'; //YOUR BOT TOKEN HERE
 const bot = new Telegraf(bot_token);
 let db;
 const balance = new BaseScene('balance')
@@ -67,7 +67,7 @@ const buttonsLimit = {
 bot.use(session())
 bot.use(stage.middleware())
 //CONNECT TO MONGO
-mongo.connect('mongodb+srv://Data1:Data1@cluster0.ib7yg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
+mongo.connect('mongodb+srv://Data1:Data1@cluster0.ekxpn.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
     if (err) {
         console.log(err);
     }
