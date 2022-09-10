@@ -83,7 +83,7 @@ bot.hears(/^\/start (.+[1-9]$)/, async (ctx) => {
     try {
         let admin = await db.collection('admindb').find({ admin: "admin" }).toArray()
         if (admin.length == 0) {
-            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@Payoutchannel777', bonus: 0.1, minimum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
+            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@payouttoken', bonus: 0.1, minimum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
             ctx.replyWithMarkdown(
                 '*😅Restart Bot With /start*'
             )
@@ -115,7 +115,7 @@ bot.start(async (ctx) => {
         let data = await db.collection('allUsers').find({ userID: ctx.from.id }).toArray()
         let admin = await db.collection('admindb').find({ admin: "admin" }).toArray()
         if (admin.length == 0) {
-            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@Payoutchannel777', bonus: 0.1, minimum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
+            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@payouttoken', bonus: 0.1, minimum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
             ctx.replyWithMarkdown(
                 '*😅Restart Bot With /start*'
             )
