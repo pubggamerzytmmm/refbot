@@ -448,13 +448,13 @@ bot.hears('📊 Statistics', async (ctx) => {
                 if (statdata.length == 0) {
                     db.collection('allUsers').insertOne({ stats: "stats", value: 0 })
                     ctx.reply(
-                        '<b>📊 Bot Live Stats 📊\n\n📤 Total Payouts : 0 ' + currency + '\n\n💡 Total Users: ' + members.length + ' Users\n\n🔎 Coded By: <a href="tg://user?id=2131044278">Piro Roney🔥</a></b>' , { parse_mode: 'html', reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
+                        '<b>📊 Bot Live Stats 📊\n\n📤 Total Payouts : 0 ' + currency + '\n\n💡 Total Users: ' + members.length + ' Users\n\n🔎 Coded By: <a href="tg://user?id=1719828321">Sonali</a></b>' , { parse_mode: 'html', reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
                     )
                 } else {
                     let payout = statdata[0].value * 1
                     let memb = parseInt(members.length)
                     ctx.reply(
-                        '<b>📊 Bot Live Stats 📊\n\n📤 Total Payouts : ' + payout + ' ' + currency + '\n\n💡 Total Users: ' + memb + ' Users\n\n🔎 Coded By: <a href="tg://user?id=2131044278">Piro Roney🔥</a></b>', { parse_mode: 'html', reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
+                        '<b>📊 Bot Live Stats 📊\n\n📤 Total Payouts : ' + payout + ' ' + currency + '\n\n💡 Total Users: ' + memb + ' Users\n\n🔎 Coded By: <a href="tg://user?id=1719828321">Sonali</a></b>', { parse_mode: 'html', reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
                     )
                 }
             } else {
