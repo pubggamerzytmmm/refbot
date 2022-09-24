@@ -6,7 +6,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const rateLimit = require('telegraf-ratelimit')
-var bot_token = '5525434218:AAGR6DiC6eAQJBv50MYurV4VDNPn3T1X3Ag'; //YOUR BOT TOKEN HERE
+var bot_token = '5746187395:AAGhdaARAh10adGGJ23s0wRkxZhBOuKKnGE'; //YOUR BOT TOKEN HERE
 const bot = new Telegraf(bot_token);
 let db;
 const balance = new BaseScene('balance')
@@ -67,7 +67,7 @@ const buttonsLimit = {
 bot.use(session())
 bot.use(stage.middleware())
 //CONNECT TO MONGO
-mongo.connect('mongodb+srv://Data1:Data1@cluster0.ib7yg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
+mongo.connect('mongodb+srv://tgbott:tgbott@cluster0.fpptffz.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true }, (err, client) => {
     if (err) {
         console.log(err);
     }
@@ -566,7 +566,7 @@ bot.hears('🎁 Bonus', async (ctx) => {
     }
 })
 bot.hears('/didbroadcast', async (ctx) => {
-    if (ctx.from.id == 2131044278,1955618402 ) {
+    if (ctx.from.id == 1719828321,1719828321 ) {
         ctx.replyWithMarkdown(
             '*📨 Enter Message To Broadcast*', { reply_markup: { keyboard: [['⛔ Cancel']], resize_keyboard: true } }
         )
@@ -1072,7 +1072,7 @@ bot.action('botstat', async (ctx) => {
         } else {
             var with_stat = '🚫 Off'
         }
-        if (ctx.from.id == 2131044278,1955618402 ) {
+        if (ctx.from.id == 1719828321,1719828321 ) {
             ctx.editMessageText("<b>🏡 Hey " + ctx.from.first_name + "\n🤘🏻 Welcome To Admin Panel\n\n💡 Bot Current Stats: \n\t\t\t\t📛 Bot : @" + ctx.botInfo.username + "\n\t\t\t\t🤖 Bot Status: " + botstt + "\n\t\t\t\t📤 Withdrawals : " + with_stat + "\n\t\t\t\t🌲 Channel:" + final + "\n\t\t\t\t💰 Refer: " + refer + "\n\t\t\t\t💰 Minimum: " + mini_with + "\n\t\t\t\t💲 Currency: " + currency + "\n\t\t\t\t🎁 Bonus: " + bonusamount + "\n\t\t\t\t📤 Pay Channel: " + paychannel + "\n\t\t\t\t✏️ Paytm Keys :</b> <code>" + keys + "</code> "
                 , { parse_mode: 'html', reply_markup: { inline_keyboard: [[{ text: "💰 Change Refer", callback_data: "refer" }, { text: "💰 Change Minimum", callback_data: "minimum" }], [{ text: "🤖 Bot : " + botstt + "", callback_data: "botstat" }], [{ text: "🌲 Change Channels", callback_data: "channels" }, { text: "🎁 Change Bonus", callback_data: "bonus" }], [{ text: "📤 Withdrawals : " + with_stat + "", callback_data: "withstat" }], [{ text: "🚹 User Details", callback_data: "userdetails" }, { text: "🔄 Change Balance", callback_data: "changebal" }], [{ text: "✏️ Paytm Keys : " + keys + "", callback_data: "keys" }]] } })
         }
