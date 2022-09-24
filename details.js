@@ -85,7 +85,7 @@ bot.hears(/^\/start (.+[1-9]$)/, async (ctx) => {
     try {
         let admin = await db.collection('admindb').find({ admin: "admin" }).toArray()
         if (admin.length == 0) {
-            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@ClaimPaisaPayout', bonus: 0.1, minimum: 1, maximum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
+            db.collection('admindb').insertOne({ admin: "admin", ref: 1, cur: 'INR', paychannel: '@notset', bonus: 0.1, minimum: 1, maximum: 1, botstat: 'Active', withstat: 'ON', subwallet: 'NOT SET', MKEY: 'NOT SET', MID: 'NOT SET', channels: [] })
             ctx.replyWithMarkdown(
                 '*😅Restart Bot With /start*'
             )
